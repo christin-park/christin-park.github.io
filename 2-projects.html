@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects | Christin Park</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/claud-images/moop.png">
+    <style> body { overflow-y: auto; } </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Memory Keeper</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="0-home.html"><img class="claud-2" src="images/claud-2.png"></a>
+    <div class="mid-col">
+        <p class="project-title">Personal Projects</p>
+        <hr>
+        <!--memory keeper-->
+        <div class="one-project">
+            <p class="project-title">Memory Keeper</p>
+            <div class="slideshow">
+                <div class="slideshow-elements">
+                    <div class="slideshow-images">
+                        <img id="slide-15" src="images/project-images/website-14.jpg">
+                        <img id="slide-16" src="images/project-images/website-15.jpg">
+                    </div>  
+                    <div class="slideshow-nav">
+                        <a href="#slide-15"><img src="images/project-images/website-14.jpg"></a>
+                        <a href="#slide-16"><img src="images/project-images/website-15.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="project-desc">
+                A page to share about myself and personal projects! <br><br>
+
+                After multiple attempts to make a personal website, I think I've settled on
+                something I'm happy about sharing :D.
+                I designed this site so that if you are here for the content (viewing my experience and personal projects),
+                you can find it linearly and quickly. However, I also wanted to make it a place where I could share my interests,
+                so I've added them in hidden places. If you want to see the other content on this website, try becoming more
+                acquainted with the Memory Keeper ;). <br><br>
+
+                Web dev: HTML, CSS, JS, VSCode, Github Pages <br>
+                Art: Clip Studio Paint 
+
+            </p>
+        </div>
+        <hr>
+
+        <!--pixel mouse-->
+        <div class="one-project">
+            <p class="project-title">Pixel Mouse</p>
+            <div class="slideshow">
+                <div class="slideshow-elements">
+                    <div class="slideshow-images">
+                        <img id="slide-6" src="images/project-images/website-7.jpg">
+                        <img id="slide-7" src="images/project-images/website-6.jpg">
+                    </div>  
+                    <div class="slideshow-nav">
+                        <a href="#slide-6"><img src="images/project-images/website-7.jpg"></a>
+                        <a href="#slide-7"><img src="images/project-images/website-6.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="project-desc">
+                An original technical project for IEEE TAMU! <br><br>
+                
+                Club members group up in teams to make either an Arduino breadboard or PCB game controller based
+                on their current skill level. Workshops are held on breadboarding, Arduino, hardware implementation
+                (joystick and push buttons), soldering, and PCB design. After teams finish their designs, they
+                will compete by playing a competitive version of Pixel Mouse for the fastest average time in
+                3 maze levels for prizes. <br><br>
+
+                The Pixel Mouse game has 11 unique hotkeys, however only 4 (WASD/cardinal movement) are necessary to
+                complete the game; all other hotkeys are coding challenges which give a better edge in completing a
+                level quicker. <br><br>
+
+                The game code has a function called 'private void Update() {}', which is a function that is repeatedly ran. It is useful for
+                recieving real-time feedback from the player (this is similar to 'void loop() {}' in Arduino). The game is coded so
+                that when a hotkey is registered, the action of that hotkey will play. For example, if you press 'J', the expected
+                behavior would be to jump. However, on a keyboard, the button behavior is to spam the character when you hold a key down.
+                Therefore the game had to be coded so that it only accounts for 1 'J' when you press a button down, instead of spamming
+                the jump action everytime 'J' is registered per button press. <br><br>
+
+                This is why there are 2 different versions of Pixel Mouse--a keyboard-compatible and Arduino-compatible version.
+                The keyboard-compatible version shows the correct behavior of how Pixel Mouse should be ran. This version
+                is coded based on the keyboard's spamming behavior when you press a key.
+                The Arduino compatible version is essentially a bugged version of the way the game is meant to be played. The same 
+                mechanism of 'if a hotkey is registered, the action of that hotkey will play' applies, however the game isn't coded 
+                to account for the spamming behavior. Instead, it will be coded on the Arduino game controller.
+                For the same example of 'J', you would want to code the button so that if you pressed the button, regardless of how
+                long you hold it, it will only register one 'J'. All hotkeys, button behavior, workshops, and general information are on the Pixel Mouse website
+                linked below! <br><br>
+
+                Before Pixel Mouse, I was originally interested in the design of a game controller.
+                At the time, I was playing the PC version of NieR:Automata and heard many comments of 
+                how the gameplay was made with a controller in mind instead of KBM. I had an idea of creating
+                a handheld game controller using a PCB. While I had this idea, I was
+                also dabbling in game design, so I just decided to make a game that worked exclusively
+                with the way I would program the Arduino game controller, Pixel Mouse!
+
+                I am still game-controller-less (the Pixel Mouse game controller
+                effectively works as a keyboard emulator), but throughout this project I was able to learn some cool skills! <br><br>
+                
+                
+                
+                Pixel Mouse website:  <a class="hyperlink" target="_blank" href="https://pixelmouse.me">pixelmouse.me</a> <br>
+                Game (demo) link:  <a class="hyperlink" target="_blank" href="https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U">https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U</a> <br><br>
+
+                PCB design: Altium Designer <br>
+                Game dev: C#, Unity2D, VSCode, Audacity <br>
+                Arduino: C++, Arduino IDE <br>
+                Web dev: HTML, CSS, JS, VSCode, Github Pages, GoDaddy <br>
+                Art: Clip Studio Paint 
+            </p>
+        </div>
+        <hr>
+
+        <!--nature's message-->
+        <div class="one-project">
+            <p class="project-title">Nature's Message</p>
+            <div class="slideshow">
+                <div class="slideshow-elements">
+                    <div class="slideshow-images">
+                        <img id="slide-9" src="images/project-images/website-9.jpg">
+                        <img id="slide-8" src="images/project-images/website-8.jpg">
+                        <img id="slide-10" src="images/project-images/website-10.jpg">
+                    </div>  
+                    <div class="slideshow-nav">
+                        <a href="#slide-9"><img src="images/project-images/website-9.jpg"></a>
+                        <a href="#slide-8"><img src="images/project-images/website-8.jpg"></a>
+                        <a href="#slide-10"><img src="images/project-images/website-10.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="project-desc">
+                A game where the player can write a letter on a leaf plane! <br><br>
+
+                This game takes place in a world that has a special tree. The leaves on this tree
+                grow in a way where they naturally crease at their stems. When they fall from the tree,
+                the wind shapes the leaves into a plane-like form while carrying away the tree’s
+                sticky seeds. Sometimes, the leaves don’t travel very far. Characters from this
+                world like to etch messages on these fallen leaves and then send the leaf planes on their way.<br><br>
+
+                The seeds may fly far enough to flourish in a part of the forest with less-dense vegetation.
+                Someone might come along and see the message that's written on the tampered leaf plane.
+                Other times, the leaf plane might fly unnoticed. Would you join them in making a leaf plane?<br><br>
+
+                The idea behind this game was to share what I'm thinking about when I work on side projects.
+                Whenever I work on one, I feel like I am making my own little leaf plane,
+                and aimlessly flying it away. I’m not aiming my plane anywhere specific,
+                it will just exist and if it reaches somewhere, it reaches. Even though you might
+                put a lot of effort into your craft, (and in the case of the game, more effort
+                in your message or more effort into the throw), it doesn’t necessarily mean
+                more people will see it. But I realized it didn't matter to me, because the motivation behind these projects
+                aren't contingent on others’ reactions or the quantity of people who see them. I don't think I should put weight on
+                things that are out of my control (I can’t control who can/can’t see my work or the quantity),
+                and if I enjoyed the process of my project (in the context of the game, writing the message), who
+                cares who sees it... Although it is quite fun to talk about projects with close friends. ;D <br><br>
+
+                Also, the character with the red cloak in the game is part of a bigger fictional story that I want
+                to eventually write and possibly create a much bigger game about.
+                Fun fact: The Memory Keeper's clothes were sewn by this character! <br><br>
+                
+                Game dev: C#, Unity2D, VSCode, Audacity <br>
+                Art: Clip Studio Paint 
+
+            </p>
+        </div>
+        <hr>
+
+        <!--pc build-->
+        <div class="one-project">
+            <p class="project-title">PC with a soul</p>
+            <div class="slideshow">
+                <div class="slideshow-elements">
+                    <div class="slideshow-images">
+                        <img id="slide-1" src="images/project-images/website_1.jpg">
+                        <img id="slide-2" src="images/project-images/website_2.jpg">
+                        <img id="slide-14" src="images/project-images/website_14.jpg">
+                        <img id="slide-3" src="images/project-images/website_3.jpg">
+                        <img id="slide-4" src="images/project-images/website_4.jpg">
+                        <img id="slide-13" src="images/project-images/website-13.jpg">
+                    </div>  
+                    <div class="slideshow-nav">
+                        <a href="#slide-1"><img src="images/project-images/website_1.jpg"></a>
+                        <a href="#slide-2"><img src="images/project-images/website_2.jpg"></a>
+                        <a href="#slide-14"><img src="images/project-images/website_14.jpg"></a>
+                        <a href="#slide-3"><img src="images/project-images/website_3.jpg"></a>
+                        <a href="#slide-4"><img src="images/project-images/website_4.jpg"></a>
+                        <a href="#slide-13"><img src="images/project-images/website-13.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="project-desc">
+                A mid-range PC build that has a soul! <br><br>
+                The idea for this build was to create 3D print of some drawings I like to make (the last image on the carousel)!
+                I ended up with a black-out PC build with white LEDs sourcing from the memory sticks and an external LED strip.
+                When the PC is on, a white pulsing animation runs through the LED strip and towards the girl. There is a hollow
+                section in the print so that end of the LED strip connects to her heart, making it appear like her heart is pulsing. :)<br><br>
+
+                Individual PC parts: <br>
+                CPU: AMD Ryzen 5 5600X 3.7 GHz 6-Core Processor <br> 
+                CPU cooler: Noctua NH-U12S chromax.black 55 CFM CPU Cooler <br>
+                Motherboard: MSI MAG B550 TOMAHAWK MAX WIFI ATX AM4 Motherboard <br>
+                Memory: Samsung 970 Evo Plus 1 TB M.2-2280 PCIe 3.0 X4 NVME SSD <br>
+                Storage: 1TB M.2-2280 PCLe 3.0 SSD <br>
+                GPU: XFX Speedster QICK 308 Black Radeon RX 6600 XT 8 GB Video Card <br>
+                Case: Lian Li O11 Air Mini ATX Mid Tower Case <br>
+                Power supply: Corsair RM750x (2021) 750 W 80+ Gold Certified Fully Modular ATX Power Supply <br>
+                LED strip: Phanteks Neon Digital RGB LED Strip - 550mm<br>
+                GPU Brace: Antec Graphics Card GPU Brace Support Video Card Sag Holder Holster Bracket Anodized Aerospace Aluminum <br><br>
+
+                
+                After building the PC, I booted up Blender and 3D modeled her (the first PC stress test!).
+                I had to add some locking mechanisms to the head and arms so that I could add the dress.
+                After modelling, I went to 3D print her from an on-campus service at my college, and I
+                ended up meeting some cool people who were administering the printers. One time, I walked in on them
+                3d printing bird-shaped whistles and saw them having fun making music.
+                They also were lenient with printing multiple orientations and offering
+                reprints. They asked curious questions about my print, and it made me excited seeing how interested they
+                were in my little project! Good memories... Then I sewed the dress, locked the limbs into place, and
+                added her to the tower! Fun fact: To create the eyes, I took a free sticker,
+                scribbled black sharpie, and cut it into the right sizes. Problem solving: 100<br><br>
+                
+                3D Modelling: Blender
+            </p>
+        </div>
+        <hr>
+
+        <!--cave-->
+        <div class="one-project">
+            <p class="project-title">Cave game (WIP)</p>
+            <div class="slideshow">
+                <div class="slideshow-elements">
+                    <div class="slideshow-images">
+                        <img id="slide-11" src="images/project-images/website-11.jpg">
+                        <img id="slide-12" src="images/project-images/website-12.jpg">
+                    </div>  
+                    <div class="slideshow-nav">
+                        <a href="#slide-11"><img src="images/project-images/website-11.jpg"></a>
+                        <a href="#slide-12"><img src="images/project-images/website-12.jpg"></a>
+                    </div>
+                </div>
+            </div>
+            <p class="project-desc">
+                A short story/character-focused game I'm working on with my brother, Caleb! <br><br>
+                
+                A young bat is recruited to work in a jewel-rich mine. The surface dwellers of the world
+                find huge value in the pretty jewels sourcing from the mines, however they don't have any discerning
+                physical nor practical qualities, other than looks. This makes the jewels hard to discover
+                with instruments, and the task of hand-picking these jewels from mines are given to miners
+                like the young bat. <br><br>
+                
+                In the mine, he meets 4 other coworkers--a senior, an energetic achiever, a carefree yet efficient friend,
+                and another young recruit heaped with nervousness--all of whom have different
+                perspectives on their current circumstances. Despite their differences, they all work their hardest
+                day by day to meet their quotas. <br><br>
+
+                One day, when the young bat is faced with a hard rock, he resorts to
+                TNT to blow through the mine. Following the explosion, he finds a startling truth of their world...<br><br>
+
+                Concept Art: Clip Studio Paint 
+            </p>
+        </div>
+        <hr>
+        <p class="end">&#169; 2023 Made with love by Christin Park</p>
+        
+    </div>
+    
+
+    
+</body>
+</html>

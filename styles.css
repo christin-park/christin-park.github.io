@@ -1,5 +1,5 @@
 body {
-    font-family: 'Annie Use Your Telescope';
+    font-family: PastelCrayon;
     margin: 0;
     padding: 0;
     font-size: 22px;
@@ -41,13 +41,13 @@ body {
     width: 2rem;
 }
 
-::-webkit-scrollbar-track {
+.click-text::-webkit-scrollbar-track {
     border: 30px solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
 }
 
-::-webkit-scrollbar-thumb {
+.click-text::-webkit-scrollbar-thumb {
     border: 30px solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
@@ -55,7 +55,7 @@ body {
     transition: background-color 0.3s ease-in-out;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.click-text::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -69,14 +69,29 @@ body {
 
 }
 
+#skip-checkbox {
+    border: 32px solid;
+    border-image-source: url('images/text-box.png');
+    border-image-slice: 100;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+}
+
+
 .claud-div {
     position: relative;
 }
 
-@media (max-width: 750px) {
-    .everything {
-        flex-direction: column-reverse;
-    }
+@media (max-width: 2000px) {
+    /* .everything {
+        display: flex;
+        flex-direction: column;
+        background-color: pink;
+        height: 100%;
+    } */
 
 }
 
@@ -93,19 +108,26 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    display: flex;
+    height: 90vh;
+    width: 77vw;
+    justify-content: center;
+    gap: 6vh;
     transform: translate(-50%, -50%);
     display: flex;
-    height: 1100px;
-    width: 80vw;
-    justify-content: space-between;
-    gap: 10vh;
-
 }
 
 .background {
     height: 100%;
 }
 
+.me {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 1.75vh;
+}
 @keyframes jump {
     0%, 100% {
         transform: translate(0, 0); 
@@ -152,13 +174,13 @@ body {
     justify-content: center;
     align-items: center;
     animation: fade-in 0.4s ease-in-out 1;
+    width: 60vh;
+    
 
 }
 
 .textbox-container {
     position: relative;
-    width: 500px;
-    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,16 +195,33 @@ body {
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     animation: fade-in 0.4s ease-in-out 1;
-    width: 30vw;
+    width: 100%;
+}
+
+.dialogue {
+    display: none;
+    font-size: 1rem;
+    font-family: PastelCrayon;
+    letter-spacing: 0.03rem;
+    line-height: 20px;
+    border: 20px solid;
+    border-image-source: url('images/text-box.png');
+    border-image-slice: 100;
+    animation: fade-in 0.4s ease-in-out 1;
+    padding: 1vh 1.5vw;
+    position: relative;
+    flex-direction: column;
+    width: 60vh;
     height: auto;
 }
 
 .click-text {
-    flex-grow: 0.5;
     overflow-y: scroll;
     padding-right: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 5vh;
     height: auto;
+    font-size: 17px;
+    letter-spacing: 1px;
 }
 
 .slide-101 {
@@ -203,10 +242,10 @@ body {
 
 .return {
     position: absolute;
-    bottom: 2vh;
-    right: 1vw;
+    bottom: 1vh;
+    right: 0.5vw;
     cursor: pointer;
-    width: 80px;
+    height: 2.5vh;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -217,21 +256,21 @@ body {
 .nav-div {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 2vh;
+    width: 100%;
 }
 
 .nav-0, .nav-1, .nav-2 {
-    border: 30px solid;
+    border: 24px solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     font-family: PastelCrayon;
     letter-spacing: 0.5px;
-    line-height: 60px;
     font-size: 25px;
     text-align: center;
     cursor: pointer;
     margin-bottom: 2vh;
-    width: 30vw;
+    
     transition: transform 0.3s ease-in-out;
 }
 
@@ -263,29 +302,12 @@ body {
 #book-img {position: absolute; left: 26.5%; top: 65%; width: 17%; z-index: 8; z-index: 2;}
 #ladder-img {position: absolute; left: 27%; top: 39%; width: 20%; z-index: 1;}
 
-.dialogue {
-    display: none;
-    font-size: 1rem;
-    font-family: PastelCrayon;
-    letter-spacing: 0.03rem;
-    line-height: 20px;
-    border: 22px solid;
-    border-image-source: url('images/text-box.png');
-    border-image-slice: 100;
-    animation: fade-in 0.4s ease-in-out 1;
-    padding: 1vh 1.5vw;
-    height: auto;
-    position: relative;
-    flex-grow: 1;
-    flex-direction: column;
-}
-
 .dialogue-img {
     display: block; margin: 0 auto; padding: 3.5vh 0;
 }
 
 .found-text {
-   font-size: 25px; font-style: italic; padding-top: 1vh;
+   font-size: 27px; font-style: italic; padding-top: 1vh;
 }
 
 .jump-animation {

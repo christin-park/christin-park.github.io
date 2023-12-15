@@ -1,5 +1,7 @@
 window.onload = function() {
     checkFirstVisit();
+    checkCheckboxState();
+    funcStartFromLastIndex();
 };
 
 function setVisitStatus() {
@@ -30,6 +32,14 @@ function countVisits() {
 }
 
 const numberOfVisits = countVisits();
+
+function handleRefreshButtonClick() {
+    alert('The Memory Keeper has called in sick. Please check back later.');
+    localStorage.clear();
+    window.close();
+}
+
+document.getElementById('refresh').addEventListener('click', handleRefreshButtonClick);
 
 const textContents = [
     "Hello! I'm a memory keeper.",
@@ -103,7 +113,6 @@ nextArrow.addEventListener('click', () => {
     }
 });
 
-
 function navButtons() {
     const navContent = [
         "About Christin Park",
@@ -138,6 +147,48 @@ function scrollToElement(myElement) {
       element.scrollIntoView({ behavior:'instant'});
     }
   }
+
+const skipCheckbox = document.getElementById('skip-checkbox');
+let startFromLastIndex = false;
+
+skipCheckbox.addEventListener('change', function() {
+    startFromLastIndex = this.checked;
+    if (startFromLastIndex) {
+        currentIndex = currentTexts.length - 1;
+        previousIndex = currentIndex;
+        currentText = '';
+        characterIndex = 0;
+        isTyping = true;
+        textContentElement.textContent = '';
+        typeText();
+    }
+});
+
+function checkCheckboxState() {
+    const storedCheckboxState = localStorage.getItem('startFromLastIndex');
+    if (storedCheckboxState === 'true') {
+        skipCheckbox.checked = true;
+        startFromLastIndex = true;
+    }
+}
+
+skipCheckbox.addEventListener('change', function() {
+    startFromLastIndex = this.checked;
+    localStorage.setItem('startFromLastIndex', startFromLastIndex);
+    funcStartFromLastIndex();
+});
+
+function funcStartFromLastIndex() {
+    if (startFromLastIndex) {
+        currentIndex = currentTexts.length - 1;
+        previousIndex = currentIndex;
+        currentText = '';
+        characterIndex = 0;
+        isTyping = true;
+        textContentElement.textContent = '';
+        typeText();
+    }
+}
 
 //stop displaying curr divs before displaying new one
 function delInteractDivs() {
@@ -230,18 +281,25 @@ let newMoopTextDisplayed = false;
 
 fireImg.addEventListener("mouseover", function() {
     delInteractDivs();
-    moopDiv.style.display = "block";
+    moopDiv.style.display = "flex";
+    moopDialogue.innerHTML = "HMPH... haven't you ever been told to not play around fire? This is a memory keeper service, not a playground!!! <br><br>";
+    moopDialogue.innerHTML += "Well, I AM the (very) official firefighter in case people like YOU come along. So... go find some water I guess. <br><br>";
+    moopDialogue.innerHTML += "-Moop";
 
     //fire cursor
     all.classList.add('fire-cursor');
 });
 
+//If anyone is reading this, I had a hell of a time coding moop and poom because I kept forgetting who was who. :)
+
 //moop mouseover
 moopImg.addEventListener("mouseover", function() {
     if (all.classList.contains('fire-cursor') && newMoopTextDisplayed === false) {
-        moopDiv.style.display = "none"; 
+        // moopDiv.style.display = "none"; 
+        moopDiv.style.visibility = "hidden"; //fix this, the pic shifts for the temp moment that display: none
         setTimeout(function() {
-            moopDiv.style.display = "block";
+            moopDiv.style.display = "flex";
+            moopDiv.style.visibility = "visible";
         }, 70);
         delInteractDivs();
         moopDialogue.innerHTML = `"HEY!!! I live in this a bottle, so I don't have ANY water to spare! Visit my sister, Poom, she's in charge of the water delivery service here." <br><br>`;
@@ -257,7 +315,7 @@ poomImg.addEventListener("mouseover", function() {
 
     if (all.classList.contains('fire-cursor')) {
         delInteractDivs();
-        poomDiv.style.display = "block";
+        poomDiv.style.display = "flex";
         all.classList.remove('fire-cursor');
         moopDialogue.innerHTML = "HMPH... haven't you ever been told to not play around fire? This is a memory keeper service, not a playground!!! <br><br>";
         moopDialogue.innerHTML += "Well, I AM the (very) official firefighter in case people like YOU come along. So... go find some water I guess. <br><br>";
@@ -270,14 +328,14 @@ poomImg.addEventListener("mouseover", function() {
 document.getElementById("instruments-img").addEventListener("click", function() {
     let paperCraneDiv = document.getElementById("instruments-text");
     delInteractDivs();
-    paperCraneDiv.style.display = "block";
+    paperCraneDiv.style.display = "flex";
 });
 
 //mask
 document.getElementById("mask-img").addEventListener("click", function() {
     let maskDiv = document.getElementById("mask-text");
     delInteractDivs();
-    maskDiv.style.display = "block";
+    maskDiv.style.display = "flex";
 });
 
 //back button
@@ -302,6 +360,6 @@ backButtonElements.forEach(button => {
 document.getElementById("wini-img").addEventListener("click", function() {
     let winiDiv = document.getElementById("wini-text");
     delInteractDivs();
-    winiDiv.style.display = "block";
+    winiDiv.style.display = "flex";
 });
 

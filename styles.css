@@ -1,10 +1,9 @@
+
 body {
     font-family: PastelCrayon;
     margin: 0;
     padding: 0;
-    font-size: 22px;
     scroll-behavior: smooth;
-    /* overflow-y: scroll; */
 }
 
 .end-1 {
@@ -37,18 +36,18 @@ body {
     100% {cursor: url(images/claud-images/fire-8.png), auto;}
 }
 
-::-webkit-scrollbar {
+.click-text::-webkit-scrollbar {
     width: 2rem;
 }
 
 .click-text::-webkit-scrollbar-track {
-    border: 30px solid;
+    border: 2.5vh solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
 }
 
 .click-text::-webkit-scrollbar-thumb {
-    border: 30px solid;
+    border: 2.5vh solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     width: 1.5rem;
@@ -56,7 +55,7 @@ body {
 }
 
 .click-text::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgb(241, 238, 238);
 }
 
 .claud-2 {
@@ -78,6 +77,7 @@ body {
 .question {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 
@@ -110,11 +110,11 @@ body {
     left: 50%;
     display: flex;
     height: 90vh;
-    width: 77vw;
     justify-content: center;
     gap: 6vh;
     transform: translate(-50%, -50%);
     display: flex;
+    width: 77vw;
 }
 
 .background {
@@ -159,24 +159,16 @@ body {
     border-image-slice: 100; */
     height: 100px;
 }
-.crayon-text {
-    font-family: PastelCrayon;
-    letter-spacing: 0.5px;
-    line-height: 60px;
-    font-size: 25px;
-}
 
 .right-text {
     font-size: 20px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     animation: fade-in 0.4s ease-in-out 1;
-    width: 60vh;
-    
-
+    width: 70.7vh;
+    height: auto;
 }
 
 .textbox-container {
@@ -191,11 +183,12 @@ body {
     font-family: PastelCrayon;
     letter-spacing: 1px;
     line-height: 40px;
-    border: 32px solid;
+    border: 2.5vh solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     animation: fade-in 0.4s ease-in-out 1;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .dialogue {
@@ -204,7 +197,7 @@ body {
     font-family: PastelCrayon;
     letter-spacing: 0.03rem;
     line-height: 20px;
-    border: 20px solid;
+    border: 2.5vh solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     animation: fade-in 0.4s ease-in-out 1;
@@ -220,8 +213,9 @@ body {
     padding-right: 2rem;
     margin-bottom: 5vh;
     height: auto;
-    font-size: 17px;
-    letter-spacing: 1px;
+    font-size: 1.5vh;
+    letter-spacing: 0.05vh;
+    line-height: 2.3vh;
 }
 
 .slide-101 {
@@ -231,7 +225,7 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 80px;
+    height: 2.5vh;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
@@ -261,16 +255,16 @@ body {
 }
 
 .nav-0, .nav-1, .nav-2 {
-    border: 24px solid;
+    border: 2.5vh solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
     font-family: PastelCrayon;
-    letter-spacing: 0.5px;
-    font-size: 25px;
     text-align: center;
     cursor: pointer;
     margin-bottom: 2vh;
-    
+    font-size: 2vh;
+    letter-spacing: 0.1vh;
+    line-height: 3.5vh;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -279,7 +273,11 @@ body {
 }
 
 .text-content {
+    padding: 1vh 4vh;
     padding-bottom: 3vh;
+    font-size: 2.75vh;
+    letter-spacing: 0.075vh;
+    line-height: 3.5vh;
 }
 
 /*the one instance where writing line by line is actually cleaner lol*/
@@ -307,7 +305,10 @@ body {
 }
 
 .found-text {
-   font-size: 27px; font-style: italic; padding-top: 1vh;
+    font-style: italic; padding-top: 1vh;
+    font-size: 2.25vh;
+    letter-spacing: 0.075vh;
+    line-height: 3.5vh;
 }
 
 .jump-animation {
@@ -322,16 +323,13 @@ body {
 }
 
 .mid-col {
-    max-width: 1200px;
+    margin: auto;
+    max-width: 1500px;
     margin: auto;
     font-family: 'Assistant';
-    font-size: 1.25vh;
-    letter-spacing: 0.5px;
-    line-height: 2vh;
-    /* font-family: PastelCrayon;
     font-size: 17px;
-    letter-spacing: 1.5px;
-    line-height: 25px; */
+    letter-spacing: 0.5px;
+    line-height: 28px;
 }
 
 .eye-image {
@@ -354,7 +352,7 @@ body {
     margin: auto;
     max-width: 900px;
     text-align: center; 
-    margin: 0;
+    
 }
 
 .slideshow-images img {

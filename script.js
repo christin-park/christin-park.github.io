@@ -34,9 +34,10 @@ function countVisits() {
 const numberOfVisits = countVisits();
 
 function handleRefreshButtonClick() {
-    alert('The Memory Keeper has called in sick. Please check back later.');
+    alert('Claud has called in sick. Please check back later.');
     localStorage.clear();
-    window.close();
+    window.close(); //apparently this doesn't work for everyone, but if it does it's really dramatic :D
+    location.reload();
 }
 
 document.getElementById('refresh').addEventListener('click', handleRefreshButtonClick);
@@ -141,12 +142,6 @@ function navButtons() {
     }
 }
 
-function scrollToElement(myElement) {
-    const element = document.getElementById(myElement);
-    if (element) {
-      element.scrollIntoView({ behavior:'instant'});
-    }
-  }
 
 const skipCheckbox = document.getElementById('skip-checkbox');
 let startFromLastIndex = false;
@@ -243,12 +238,22 @@ document.getElementById("skyta-img").addEventListener("click", function() {
     delInteractDivs();
     stickerDiv.style.display = "flex";
 });
-  
+
+//extra skyta dialogue
+let hasSeenCookieJar = false;
+
+// const cookieJar = document.getElementById('cookie-jar-text');
+if (hasSeenCookieJar) {
+    document.getElementById('skyta-content').style.display = 'block';
+}
+
+
 //cookie jar
 document.getElementById("cookie-jar-img").addEventListener("click", function() {
     let stickerDiv = document.getElementById("cookie-jar-text");
     delInteractDivs();
     stickerDiv.style.display = "flex";
+    hasSeenCookieJar = true;
 });
 
 //paper plane
@@ -295,13 +300,6 @@ fireImg.addEventListener("mouseover", function() {
 //moop mouseover
 moopImg.addEventListener("mouseover", function() {
     if (all.classList.contains('fire-cursor') && newMoopTextDisplayed === false) {
-        // moopDiv.style.display = "none"; 
-        moopDiv.style.visibility = "hidden"; //fix this, the pic shifts for the temp moment that display: none
-        setTimeout(function() {
-            moopDiv.style.display = "flex";
-            moopDiv.style.visibility = "visible";
-        }, 70);
-        delInteractDivs();
         moopDialogue.innerHTML = `"HEY!!! I live in this a bottle, so I don't have ANY water to spare! Visit my sister, Poom, she's in charge of the water delivery service here." <br><br>`;
         moopDialogue.innerHTML += "-Moop";
         newMoopTextDisplayed = true;

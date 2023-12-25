@@ -122,9 +122,9 @@ function navButtons() {
     ];
 
     const navTo = [
-        '1-about.html',
-        '2-projects.html',
-        '3-adventures.html'
+        './about',
+        './projects',
+        './adventures'
     ]
 
     const navDiv = document.querySelector('.nav-div');
@@ -340,7 +340,7 @@ document.getElementById("mask-img").addEventListener("click", function() {
 const backButtonElements = document.querySelectorAll('.go-back');
 backButtonElements.forEach(button => {
     button.addEventListener('click', () => {
-        window.location.href= '0-home.html';
+        window.location.href= './';
         delInteractDivs();
         let rightText = document.querySelector(".right-text");
         rightText.style.display = "flex";

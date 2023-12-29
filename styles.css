@@ -86,16 +86,19 @@ body {
     position: relative;
 }
 
-@media (max-width: 1450px) {
+@media (max-width: 1800px) {
     .everything {
-        display: flex;
         flex-direction: column !important;
         height: auto !important;
         transform: none;
-        align-content: center;
-        /* top: 65vh !important; */
-        /* background-color: pink; */
-        margin-top: 18vh;
+        justify-content: center;
+        align-items: center;
+        top: 0% !important;
+        left: 12% !important;
+        margin: auto !important;
+        margin-top: 10px !important;
+        transform: none !important;
+
     }
 
     .right-text {
@@ -105,9 +108,9 @@ body {
     .background {
         /* position: relative; */
         width: 100%;
-        height: auto;
-        /* background-color: aqua; */
+        height: 100vh !important;
     }
+    
 
     .dialogue {
         width: auto !important;
@@ -134,6 +137,44 @@ body {
         text-align: center;
     }
 
+    .main-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .return-arrow {
+        position: relative !important;
+        display: block;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .background {
+        height: 100% !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .me-image {
+        width: 100% !important;
+    }
+
+    .slideshow-images {
+        display: none !important;
+    }
+    .slideshow {
+        width: 100% !important;
+    }
+    .slideshow-nav img {
+        width: 100% !important;
+        margin: auto;
+    }
+    .slideshow-nav a {
+        opacity: 1 !important;
+        cursor: default;
+    }
 }
 
 .claud-2:hover {
@@ -288,6 +329,18 @@ body {
     transform: translateX(0.25vw);
 }
 
+.return-arrow {
+    transform: scaleX(-1);
+    width: 80px;
+    transition: transform 0.2s ease-in-out;
+    position: absolute;
+    top: 27%;
+    left: 0;
+}
+.return-arrow:hover {
+    transform: scaleX(-1) translateX(0.25vw);
+}
+
 .nav-div {
     display: flex;
     flex-direction: column;
@@ -368,9 +421,17 @@ body {
     max-width: 1500px;
     margin: auto;
     font-family: 'Assistant';
-    font-size: 14px;
+    font-size: 13.5px;
     letter-spacing: 0.4px;
     line-height: 22px;
+}
+
+.project-header {
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .eye-image {
@@ -378,21 +439,20 @@ body {
 }
 
 .me-image {
-    max-width: 600px;
+    width: 50%;
     display: block;
     margin: auto;
     border-radius: 10px;
+    margin-bottom: 2.5vh;
 }
 
 .project-desc {
-    padding-top: 4vh;
-    padding-bottom: 2.5vh;
     margin: 0;
 }
 .slideshow {
-    margin: auto;
-    max-width: 900px;
-    text-align: center; 
+    width: 60%;
+    text-align: center;
+    margin: 2vh auto;
     
 }
 
@@ -409,6 +469,7 @@ body {
     aspect-ratio: 16/9;
     overflow-x: hidden;
     border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(142, 138, 130, 0.3);
 }
 
 .slideshow-images img {
@@ -431,7 +492,7 @@ body {
 }
 
 .slideshow-nav img {
-    max-width: 150px;
+    width: 150px;
     border-radius: 10px;
     margin-top: 25px;
 }
@@ -446,15 +507,32 @@ body {
 }    
 
 .project-title {
-    font-size: 38px;
-    margin: 60px;
+    font-size: 33px;
     text-align: center;
     letter-spacing: 1px;
     line-height: 38px;
 }
 
+.main-title {
+    position: relative;
+    margin: 3.5vh 0;
+}
+
+.main-desc {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13.5px;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+}
+
 .one-project {
-    margin: 3vw 8vh;
+    margin: 3vh 4vw;
+    margin-bottom: 3vh;
+}
+
+.hr {
+    margin: 0;
 }
 
 .eye {
@@ -477,17 +555,21 @@ body {
 
 .contact-links {
     display: flex;
-    justify-content: space-between;
-    display: flex;
     align-items: center;
-    width: 35%;
 }
 
+.contact-links a {
+    margin-right: 25px;
+    margin-top: 25px;
+}
 .contact-one:hover {
     transform: translateY(-5px);
 }
 
 .contact-one {
     transition: transform 0.2s ease-in;
+}
+.contact-one img {
+    width: 40px;
 }
 

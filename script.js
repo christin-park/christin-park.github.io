@@ -361,3 +361,4 @@ document.getElementById("wini-img").addEventListener("click", function() {
     winiDiv.style.display = "flex";
 });
 
+

@@ -20,9 +20,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="./"><img class="claud-2" src="images/claud-2.png"></a>
+    
     <div class="mid-col">
-        <p class="project-title">Personal Projects</p>
+        <div class="project-title main-title">
+            <a href="./"><img class="return-arrow" src="images/arrow.png"></a>
+            PERSONAL PROJECTS
+            <div class="main-desc">
+                My projects involving electronics, game dev, web dev, PC building, and more! I'm open to
+                joining hackathons or collaborating on personal projects. I am qmasou on discord!
+            </div>
+        </div>
+        
         <hr>
         <!--memory keeper-->
         <div class="one-project">
@@ -40,17 +48,27 @@
                 </div>
             </div>
             <p class="project-desc">
-                A page to share about myself and personal projects! <br><br>
+                <p class="project-header">Overview</p>
+                My personal website displaying my intro, personal projects, and experiences! <br><br>
 
-                After multiple attempts to make a personal website, I think I've settled on
-                something I'm happy about sharing :D.
-                I designed this site so that if you are here for the content (viewing my experience and personal projects),
+                Through this website, you can meet Claud, a memory keeper tasked to tell people my memories!
+                I hope you enjoy meeting him and his friends. :)
+                I designed this site so that if you are here for the content (viewing my work experience and personal projects),
                 you can find it linearly and quickly. However, I also wanted to make it a place where I could share my interests,
                 so I've added them in hidden places. If you want to see the other content on this website, try becoming more
-                acquainted with the Memory Keeper ;). <br><br>
+                acquainted with the Memory Keeper ;). <br>
 
-                Web dev: HTML, CSS, JS, VSCode, Github Pages <br>
-                Art: Clip Studio Paint 
+                <p class="project-header">Links</p>
+                <b>•</b> Website (here): <a class="hyperlink" target="_blank" href="https://christin-park.github.io/website/"> christin-park.github.io/website</a> <br>
+                <b>•</b> Github repo:<a class="hyperlink" target="_blank" href="https://github.com/christin-park/website"> github.com/christin-park/website</a> <br>
+
+                <p class="project-header">Built with</p>
+                <b>•</b> Web dev: HTML, CSS, JS, VSCode, Github Pages <br>
+                <b>•</b> Art: Clip Studio Paint 
+
+                
+
+                
 
             </p>
         </div>
@@ -74,13 +92,16 @@
                 </div>
             </div>
             <p class="project-desc">
+                <p class="project-header">Overview</p>
                 An original technical project for IEEE TAMU! <br><br>
                 
-                The competition spiel: Club members group up in teams to make either an Arduino breadboard or PCB game controller based
+                Club members group up in teams to make either an Arduino breadboard or PCB game controller based
                 on their current skill level. Workshops are held on breadboarding, Arduino, hardware implementation
                 (joystick and push buttons), soldering, and PCB design. After teams finish their designs, they
                 will compete by playing a competitive version of a custom-made game called Pixel Mouse for the fastest average time in
-                3 maze levels for prizes. <br><br>
+                3 maze levels for prizes. <br>
+
+                <p class="project-header">Explanation</p>
 
                 The Pixel Mouse game has 11 unique hotkeys, however only 4 (WASD/cardinal movement) are necessary to
                 complete the game; all other hotkeys are coding challenges which give a better edge in completing a
@@ -103,26 +124,24 @@
                 long you hold it down, it will only register one 'J'. All hotkeys, button behavior, workshops, and general information are on the Pixel Mouse website
                 linked below! <br><br>
 
-                Before Pixel Mouse, I was originally interested in the design of a game controller.
-                At the time, I was playing the PC version of NieR:Automata and heard many comments of 
-                how the gameplay was made with a controller in mind instead of KBM. I had an idea of creating
-                a handheld game controller using a PCB. While I had this idea, I was
-                also dabbling in game design, so I just decided to make a game that worked exclusively
-                with the way I would program the Arduino game controller, Pixel Mouse!
+                The PCB game controller is built with the HID-compatible ATMEGA32u4 to effectively work as a keyboard emulator. The design shown uses a USB connection
+                for power and data transmission,
+                a clock, a reset mechanism, and ICSP pins to program the microcontroller's bootloader to be compatible with the Arduino IDE. The digital
+                pins are routed to the push buttons and the analog pins are routed to the analog joystick, and the Arduino code used for the breadboard 
+                controller is used.
 
-                I am still game-controller-less (the Pixel Mouse game controller
-                effectively works as a keyboard emulator), but throughout this project I was able to learn some cool skills! <br><br>
-                
-                
-                
-                Pixel Mouse website:  <a class="hyperlink" target="_blank" href="https://pixelmouse.me">pixelmouse.me</a> <br>
-                Game (demo) link:  <a class="hyperlink" target="_blank" href="https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U">https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U</a> <br><br>
+                <p class="project-header">Links</p>
+                <b>•</b> Pixel Mouse website: <a class="hyperlink" target="_blank" href="https://pixelmouse.me"> pixelmouse.me</a> <br>
+                <b>•</b> Game (demo) link: <a class="hyperlink" target="_blank" href="https://drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U"> drive.google.com/drive/folders/1ZfcTPopa_GqLqVcBo-Qy3-dzw8I8M9-U</a> <br>
+                <b>•</b> Pixel Mouse Game Github repo: <a class="hyperlink" target="_blank" href="https://github.com/christin-park/pixel-mouse-game"> github.com/christin-park/pixel-mouse-game</a> <br>
+                <b>•</b> Pixel Mouse Website Github repo: <a class="hyperlink" target="_blank" href="https://github.com/christin-park/pixel-mouse-website"> github.com/christin-park/pixel-mouse-website</a> <br>
 
-                PCB design: Altium Designer <br>
-                Game dev: C#, Unity2D, VSCode, Audacity <br>
-                Arduino: C++, Arduino IDE <br>
-                Web dev: HTML, CSS, JS, VSCode, Github Pages, GoDaddy <br>
-                Art: Clip Studio Paint 
+                <p class="project-header">Built with</p>
+                <b>•</b> PCB design: Altium Designer <br>
+                <b>•</b> Game dev: C#, Unity2D, VSCode, Audacity <br>
+                <b>•</b> Arduino: C++, Arduino IDE <br>
+                <b>•</b> Web dev: HTML, CSS, JS, VSCode, Github Pages, GoDaddy <br>
+                <b>•</b> Art: Clip Studio Paint 
             </p>
         </div>
         <hr>
@@ -145,45 +164,33 @@
                 </div>
             </div>
             <p class="project-desc">
+                <p class="project-header">Overview</p>
                 A game where the player can write a letter on a leaf plane! <br><br>
 
                 This game takes place in a world that has a special tree. The leaves on this tree
                 grow in a way where they naturally crease at their stems. When they fall from the tree,
                 the wind shapes the leaves into a plane-like form while carrying away the tree’s
-                sticky seeds. Sometimes, the leaves don’t travel very far. Characters from this
-                world like to etch messages on these fallen leaves and then send the leaf planes on their way.<br><br>
+                sticky seeds. Sometimes, the leaves don’t travel very far, so characters
+                like to etch messages on these fallen leaves and then send the leaf planes on their way.
+                Would you join them in making a leaf plane?
 
-                The seeds may fly far enough to flourish in a part of the forest with less-dense vegetation.
-                Someone might come along and see the message that's written on the tampered leaf plane.
-                Other times, the leaf plane might fly unnoticed. Would you join them in making a leaf plane?<br><br>
+                (The character with the red cloak is part of a bigger fictional story that I want
+                to write and maybe create a bigger game about.
+                The Memory Keeper's clothes were sewn by the character with the red cloak :D!) <br>
 
-                The idea behind this game was to share what I'm thinking about when I work on side projects.
-                Part of me wants to have a bigger audience of people viewing my works.
-                But whenever I work on one, I feel like I am making my own little leaf plane,
-                and aimlessly flying it away. I’m not aiming my plane anywhere specific,
-                it just exists and if it reaches somewhere, it reaches. Even though you might
-                put a lot of effort into your craft, (and in the case of the game, more effort
-                in your message or more effort into the throw), it doesn’t necessarily mean
-                more people will see it. But I realized that was okay, because I don't want my motivation behind these projects
-                to be contingent on the quantity of people who see them. I don't think I should put weight on
-                things that are out of my control (I largely can’t control who can/can’t see my work or the quantity),
-                but rather if I enjoyed the process of my project (in the context of the game, writing the message)
-                that is what should matter to me. Although it is quite fun to talk about projects and ideas. ;D <br><br>
+                <p class="project-header">Links</p>
+                <b>•</b> Github repo:<a class="hyperlink" target="_blank" href="https://github.com/christin-park/natures-message-game"> github.com/christin-park/natures-message-game</a> <br>
 
-                Also, the character with the red cloak in the game is part of a bigger fictional story that I want
-                to eventually write and possibly create a much bigger game about.
-                Fun fact: The Memory Keeper's clothes were sewn by this character! <br><br>
-                
-                Game dev: C#, Unity2D, VSCode, Audacity <br>
-                Art: Clip Studio Paint 
-
+                <p class="project-header">Built with</p>
+                <b>•</b> Game dev: C#, Unity2D, VSCode, Audacity <br>
+                <b>•</b> Art: Clip Studio Paint 
             </p>
         </div>
         <hr>
 
         <!--pc build-->
         <div class="one-project">
-            <p class="project-title">PC with a soul</p>
+            <p class="project-title">PC with a soul ⚇</p>
             <div class="slideshow">
                 <div class="slideshow-elements">
                     <div class="slideshow-images">
@@ -205,6 +212,7 @@
                 </div>
             </div>
             <p class="project-desc">
+                <p class="project-header">Overview</p>
                 A mid-range PC build that has a soul! <br><br>
                 The idea for this build was to create 3D print of some drawings I like to make (the last image on the carousel)!
                 I ended up with a black-out PC build with white LEDs sourcing from the memory sticks and an external LED strip.
@@ -223,19 +231,14 @@
                 LED strip: Phanteks Neon Digital RGB LED Strip - 550mm<br>
                 GPU Brace: Antec Graphics Card GPU Brace Support Video Card Sag Holder Holster Bracket Anodized Aerospace Aluminum <br><br>
 
+                I made some really great memories from this project. One of my favorites was the time I went into a 3D printing service
+                offered at my college and met the cool people administering the printers. They were really friendly and offered my print
+                in multiple orientations/reprints and asked curious questions about my project.  Their interest made me really excited, and I felt
+                encouraged to keep making personal projects! Also this one time, they were 3D printing bird-shaped whistles and were having fun making
+                music with them. ;)
                 
-                After building the PC, I booted up Blender and 3D modeled her (the first PC stress test!).
-                I had to add some locking mechanisms to the head and arms so that I could add the dress.
-                After modelling, I went to 3D print her from an on-campus service at my college, and I
-                ended up meeting some cool people who were administering the printers. One time, I walked in on them
-                3d printing bird-shaped whistles and saw them having fun making music.
-                They also were lenient with printing multiple orientations and offering
-                reprints. They asked curious questions about my print, and it made me excited seeing how interested they
-                were in my little project! Good memories... Then I sewed the dress, locked the limbs into place, and
-                added her to the tower! Fun fact: To create the eyes, I took a free sticker,
-                scribbled black sharpie, and cut it into the right sizes. Problem solving: 100<br><br>
-                
-                3D Modelling: Blender
+                <p class="project-header">Built with</p>
+                <b>•</b> 3D Modelling: Blender
             </p>
         </div>
         <hr>
@@ -256,6 +259,7 @@
                 </div>
             </div>
             <p class="project-desc">
+                <p class="project-header">Overview</p>
                 A short story/character-focused game I'm working on with my brother, Caleb! <br><br>
                 
                 A young bat is recruited to work in a jewel-rich mine. The surface dwellers of the world
@@ -270,9 +274,11 @@
                 day by day to meet their quotas. <br><br>
 
                 One day, when the young bat is faced with a hard rock, he resorts to
-                TNT to blow through the mine. Following the explosion, he finds a startling truth of their world...<br><br>
+                TNT to blow through the mine. Following the explosion, he finds a startling truth of their world...<br>
 
-                Concept Art: Clip Studio Paint 
+                
+                <p class="project-header">Built with</p>
+                <b>•</b> Concept Art: Clip Studio Paint 
             </p>
         </div>
         <hr>

@@ -72,13 +72,13 @@ body {
     border: 32px solid;
     border-image-source: url('images/text-box.png');
     border-image-slice: 100;
-    font-size: 1vh;
 }
 
 .question {
     display: flex;
     align-items: center;
     margin-left: auto;
+    font-size: 1.75vh;
 }
 
 
@@ -93,8 +93,9 @@ body {
         height: auto !important;
         transform: none;
         align-content: center;
-        top: 88% !important;
-        
+        /* top: 65vh !important; */
+        /* background-color: pink; */
+        margin-top: 18vh;
     }
 
     .right-text {
@@ -111,6 +112,26 @@ body {
     .dialogue {
         width: auto !important;
         max-height: 85vh;
+    }
+
+    .mid-col {
+        width: 70%;
+    }
+    .slideshow {
+        width: 100%;
+    }
+    .claud-2 {
+        width: 25vh;
+        position: fixed;
+        left: -1vw;
+        bottom: -21vh;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .me {
+        padding: 0px !important;
+        width: 100%;
+        text-align: center;
     }
 
 }
@@ -347,9 +368,9 @@ body {
     max-width: 1500px;
     margin: auto;
     font-family: 'Assistant';
-    font-size: 17px;
-    letter-spacing: 0.5px;
-    line-height: 28px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    line-height: 22px;
 }
 
 .eye-image {
@@ -428,6 +449,8 @@ body {
     font-size: 38px;
     margin: 60px;
     text-align: center;
+    letter-spacing: 1px;
+    line-height: 38px;
 }
 
 .one-project {

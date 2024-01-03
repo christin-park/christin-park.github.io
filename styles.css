@@ -86,7 +86,7 @@ body {
     position: relative;
 }
 
-@media (max-width: 1800px) {
+@media (max-width: 1550px) {
     .everything {
         flex-direction: column !important;
         height: auto !important;
@@ -143,16 +143,19 @@ body {
         align-items: center;
         gap: 10px;
     }
-    .return-arrow {
-        position: relative !important;
-        display: block;
-    }
+    
 
 }
 
 @media (max-width: 1200px) {
     .background {
         height: 100% !important;
+    }
+    .return-arrow {
+        position: relative !important;
+        display: block;
+        margin-top: 10px;
+        width: 90px !important;
     }
 }
 
@@ -421,13 +424,13 @@ body {
     max-width: 1500px;
     margin: auto;
     font-family: 'Assistant';
-    font-size: 13.5px;
+    font-size: 13px;
     letter-spacing: 0.4px;
     line-height: 22px;
 }
 
 .project-header {
-    font-size: 20px;
+    font-size: 17px;
     letter-spacing: 0.4px;
     line-height: 22px;
     font-weight: bold;
@@ -507,7 +510,7 @@ body {
 }    
 
 .project-title {
-    font-size: 33px;
+    font-size: 30px;
     text-align: center;
     letter-spacing: 1px;
     line-height: 38px;
@@ -516,6 +519,9 @@ body {
 .main-title {
     position: relative;
     margin: 3.5vh 0;
+    display: center;
+    margin: auto;
+    width: 100%;
 }
 
 .main-desc {
@@ -524,6 +530,8 @@ body {
     font-size: 13.5px;
     letter-spacing: 0.4px;
     line-height: 22px;
+    max-width: 800px;
+    margin: auto;
 }
 
 .one-project {

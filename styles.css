@@ -86,7 +86,7 @@ body {
     position: relative;
 }
 
-@media (max-width: 1550px) {
+@media (max-width: 1440px) {
     .everything {
         flex-direction: column !important;
         height: auto !important;
@@ -579,5 +579,16 @@ body {
 }
 .contact-one img {
     width: 40px;
+}
+
+.loc {
+    width: 18px;
+    margin: 0;
+    transform: translateY(5px);
+}
+
+#introCheckbox {
+    width: 4vh;
+    cursor: pointer;
 }
 

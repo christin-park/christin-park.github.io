@@ -64,9 +64,11 @@ let previousIndex = 0;
 let currentText = '';
 let characterIndex = 0;
 let isTyping = false;
+let storedIndex = sessionStorage.getItem('currentIndex');
 
 const textContentElement = document.querySelector('.text-content');
 const nextArrow = document.getElementById('nextArrow');
+
 
 function typeText() {
     if (characterIndex < currentTexts[currentIndex].length) {
@@ -112,6 +114,7 @@ nextArrow.addEventListener('click', () => {
             typeText();
         }
     }
+    sessionStorage.setItem('currentIndex', currentIndex);
 });
 
 function navButtons() {
@@ -360,5 +363,15 @@ document.getElementById("wini-img").addEventListener("click", function() {
     delInteractDivs();
     winiDiv.style.display = "flex";
 });
+
+//checkbox
+function toggleCheckbox() {
+    var checkbox = document.getElementById('introCheckbox');
+    if (checkbox.src.endsWith('images/claud-images/checkbox-uncheck.png')) {
+      checkbox.src = 'images/claud-images/checkbox-check.png';
+    } else {
+      checkbox.src = 'images/claud-images/checkbox-uncheck.png';
+    }
+}
 
 

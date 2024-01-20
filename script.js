@@ -1,6 +1,6 @@
 window.onload = function() {
     checkFirstVisit();
-    checkCheckboxState();
+    // checkCheckboxState();
     funcStartFromLastIndex();
 };
 
@@ -125,9 +125,9 @@ function navButtons() {
     ];
 
     const navTo = [
-        './about',
-        './projects',
-        './adventures'
+        'about',
+        'projects',
+        'adventures'
     ]
 
     const navDiv = document.querySelector('.nav-div');
@@ -140,41 +140,44 @@ function navButtons() {
         nav1.classList.add(`nav-${i}`);
         navDiv.appendChild(nav1);
         nav1.addEventListener('click', () => {
-            window.location.href = navTo[i];
+            // window.location.href = navTo[i];
+            let memDiv = document.getElementById("memory-keeper");
+            memDiv.style.display = "none";
+            let contentDiv = document.getElementById(navTo[i]);
+            contentDiv.style.display = "block";
         });
     }
 }
 
+const returnArrows2 = document.getElementsByClassName("return-arrow");
 
-const skipCheckbox = document.getElementById('skip-checkbox');
-let startFromLastIndex = false;
-
-skipCheckbox.addEventListener('change', function() {
-    startFromLastIndex = this.checked;
-    if (startFromLastIndex) {
-        currentIndex = currentTexts.length - 1;
-        previousIndex = currentIndex;
-        currentText = '';
-        characterIndex = 0;
-        isTyping = true;
-        textContentElement.textContent = '';
-        typeText();
-    }
-});
-
-function checkCheckboxState() {
-    const storedCheckboxState = localStorage.getItem('startFromLastIndex');
-    if (storedCheckboxState === 'true') {
-        skipCheckbox.checked = true;
-        startFromLastIndex = true;
-    }
+for (let i = 0; i < returnArrows2.length; i++) {
+    returnArrows2[i].addEventListener('click', () => {
+        document.getElementById("memory-keeper").style.display = "block";
+        document.getElementById("about").style.display = "none";
+        document.getElementById("projects").style.display = "none";
+        document.getElementById("adventures").style.display = "none";
+    });
 }
 
-skipCheckbox.addEventListener('change', function() {
-    startFromLastIndex = this.checked;
+//checkbox
+let startFromLastIndex = false;
+
+function toggleCheckbox() {
+    const checkbox = document.getElementById('introCheckbox');
+    //if = checked, start from last index
+    //else = unchecked, don't start from last index
+    if (checkbox.src.endsWith('images/claud-images/checkbox-uncheck.png')) {
+        checkbox.src = 'images/claud-images/checkbox-check.png';
+        startFromLastIndex = true;
+    }
+    else {
+        checkbox.src = 'images/claud-images/checkbox-uncheck.png';
+        startFromLastIndex = false;
+    }
     localStorage.setItem('startFromLastIndex', startFromLastIndex);
     funcStartFromLastIndex();
-});
+}
 
 function funcStartFromLastIndex() {
     if (startFromLastIndex) {
@@ -187,6 +190,51 @@ function funcStartFromLastIndex() {
         typeText();
     }
 }
+
+window.addEventListener('load', () => {
+    const storedState = localStorage.getItem('startFromLastIndex');
+    if (storedState) {
+        startFromLastIndex = JSON.parse(storedState);
+        const checkbox = document.getElementById('introCheckbox');
+        if (startFromLastIndex) {
+            checkbox.src = 'images/claud-images/checkbox-check.png';
+        }
+        else {
+            checkbox.src = 'images/claud-images/checkbox-uncheck.png';
+        }
+        funcStartFromLastIndex();
+    }
+});
+
+// const skipCheckbox = document.getElementById('skip-checkbox');
+
+
+// skipCheckbox.addEventListener('change', function() {
+//     startFromLastIndex = this.checked;
+//     if (startFromLastIndex) {
+//         currentIndex = currentTexts.length - 1;
+//         previousIndex = currentIndex;
+//         currentText = '';
+//         characterIndex = 0;
+//         isTyping = true;
+//         textContentElement.textContent = '';
+//         typeText();
+//     }
+// });
+
+// function checkCheckboxState() {
+//     const storedCheckboxState = localStorage.getItem('startFromLastIndex');
+//     if (storedCheckboxState === 'true') {
+//         skipCheckbox.checked = true;
+//         startFromLastIndex = true;
+//     }
+// }
+
+// skipCheckbox.addEventListener('change', function() {
+//     startFromLastIndex = this.checked;
+//     localStorage.setItem('startFromLastIndex', startFromLastIndex);
+//     funcStartFromLastIndex();
+// });
 
 //stop displaying curr divs before displaying new one
 function delInteractDivs() {
@@ -364,14 +412,5 @@ document.getElementById("wini-img").addEventListener("click", function() {
     winiDiv.style.display = "flex";
 });
 
-//checkbox
-function toggleCheckbox() {
-    var checkbox = document.getElementById('introCheckbox');
-    if (checkbox.src.endsWith('images/claud-images/checkbox-uncheck.png')) {
-      checkbox.src = 'images/claud-images/checkbox-check.png';
-    } else {
-      checkbox.src = 'images/claud-images/checkbox-uncheck.png';
-    }
-}
 
 

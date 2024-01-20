@@ -68,12 +68,6 @@ body {
 
 }
 
-#skip-checkbox {
-    border: 32px solid;
-    border-image-source: url('images/text-box.png');
-    border-image-slice: 100;
-}
-
 .question {
     display: flex;
     align-items: center;
@@ -342,6 +336,7 @@ body {
 }
 .return-arrow:hover {
     transform: scaleX(-1) translateX(0.25vw);
+    cursor: pointer;
 }
 
 .nav-div {
@@ -588,7 +583,22 @@ body {
 }
 
 #introCheckbox {
-    width: 4vh;
+    width: 3vh;
     cursor: pointer;
+    margin-left: 0.5vw;
 }
 
+#memory-keeper {
+}
+#about, #projects, #adventures {
+    display: none;
+}
+
+#refresh {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+#refresh-image {
+    width: 7vh;
+}

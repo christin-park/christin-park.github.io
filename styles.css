@@ -80,6 +80,11 @@ body {
     position: relative;
 }
 
+@media (max-width: 1800px) {
+    .mid-col {
+        width: 70%;
+    }
+}
 @media (max-width: 1440px) {
     .everything {
         flex-direction: column !important;
@@ -111,9 +116,6 @@ body {
         max-height: 85vh;
     }
 
-    .mid-col {
-        width: 70%;
-    }
     .slideshow {
         width: 100%;
     }
@@ -588,8 +590,6 @@ body {
     margin-left: 0.5vw;
 }
 
-#memory-keeper {
-}
 #about, #projects, #adventures {
     display: none;
 }

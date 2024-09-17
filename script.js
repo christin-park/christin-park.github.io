@@ -120,8 +120,8 @@ nextArrow.addEventListener('click', () => {
 function navButtons() {
     const navContent = [
         "About Christin Park",
-        "Personal Projects",
-        "Adventures"
+        "Technical Projects",
+        "Art Business"
     ];
 
     const navTo = [
